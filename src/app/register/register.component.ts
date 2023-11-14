@@ -22,11 +22,11 @@ export class RegisterComponent implements OnInit {
     answer: ''
   };
   secretQuestions?: Array<String>;
-
+  
   constructor(private userService: UserService, private formBuilder: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
-    this.secretQuestions = this.userService.getSecreatQuestions();
+        this.secretQuestions = this.userService.getSecreatQuestions();
     this.registerForm = this.formBuilder.group({
       name : ['', [
         Validators.required,
@@ -46,7 +46,7 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    debugger
+    // debugger
     this.submitted = true;
     if(this.registerForm.invalid) {
       console.log("form has errors");
@@ -54,6 +54,15 @@ export class RegisterComponent implements OnInit {
     }
     console.log("form is valid");
     this.registerUser = this.registerForm.value;
+
+    let isUserExist = this.userService.getUsers().find(e => e.email==this.registerUser.email);
+    
+    if(isUserExist != null){
+      alert("User already Exist");
+      console.log("User already Exist");
+      return;
+    }
+
     console.log("form is valid", this.registerUser);
     this.userService.saveUser(this.registerUser);
     this.userService.getUsers().forEach(element => {
@@ -63,5 +72,5 @@ export class RegisterComponent implements OnInit {
   }
 
 
-
+  
 }
