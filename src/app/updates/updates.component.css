@@ -1,0 +1,14 @@
+.main {
+    margin: auto;
+    max-width: 800px;
+}
+
+.dashboard {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(224, 57, 168);
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px rgb(91, 89, 89);
+    padding: 50px;
+    position: relative;
+}

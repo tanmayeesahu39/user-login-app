@@ -1,0 +1,39 @@
+<div class="container container-md .container-lg container-sm register">
+    <div class="row register-form">
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+            <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" formControlName="name" [ngClass]="{'is-invalid': submitted && registerForm.controls['name'].errors}" placeholder="Please enter full name" [(ngModel)]="registerUser.name">
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" formControlName="email" [ngClass]="{'is-invalid': submitted && registerForm.controls['email'].errors}" placeholder="Please enter email" [(ngModel)]="registerUser.email">
+            </div>
+            <div class="form-group col-6">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid': submitted && registerForm.controls['password'].errors}" placeholder="Please enter password" [(ngModel)]="registerUser.password">
+            </div>
+
+            <div class="form-group">
+                <label for="question" class="form-label">Security question</label>
+                <select class="form-select" aria-label="Default select example" formControlName="question" [ngClass]="{'is-invalid': submitted && registerForm.controls['question'].errors}">
+            <option selected>Select one question</option>
+            <option value={{i}} *ngFor="let q of secretQuestions;let i = index">{{q}}</option>
+            
+          </select>
+            </div>
+            <div class="form-group">
+                <label for="answer" class="form-label">Type your answer</label>
+                <input type="text" class="form-control" formControlName="answer" [ngClass]="{'is-invalid': submitted && registerForm.controls['answer'].errors}" placeholder="Please enter your answer">
+            </div>
+            <div class="register-content form-group row">
+                <div class="col-8">
+                    <span> Already have an account?&nbsp;&nbsp; <a href="login">Login</a>          </span>
+                </div>
+                <div class="col col-4 ">
+                    <button type="button" class="btn btn-primary register-btn float-end" (click)="register()"> Register </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

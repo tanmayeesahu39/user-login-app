@@ -1,0 +1,25 @@
+.navbar {
+    background: purple;
+    color: white;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-toggler-icon {
+    color: white;
+}
+
+.toggler {
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.navbar a {
+    margin-left: 20px;
+}
+
+.navbar-header {
+    border-bottom: 1px solid;
+}

@@ -1,0 +1,17 @@
+.navbar {
+    padding: 5px;
+    background: purple;
+    color: white;
+    font-weight: 500;
+    align-items: center;
+}
+
+.navbar-brand {
+    padding: 5px;
+    background: purple;
+    color: white;
+    font-weight: 500;
+    align-items: center;
+    left: auto;
+    right: auto;
+}

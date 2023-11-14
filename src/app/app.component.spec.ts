@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'user-login-app'`, () => {
+  it(`should have as title 'siemens-login-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('user-login-app');
+    expect(app.title).toEqual('siemens-login-app');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('user-login-app app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('siemens-login-app app is running!');
   });
 });

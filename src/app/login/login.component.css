@@ -1,0 +1,28 @@
+.form-group {
+    margin-top: 10px;
+}
+
+.login-form {
+    margin-top: 10px;
+    max-width: 500px;
+}
+
+input {
+    margin-top: 5px;
+}
+
+.login-form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    padding: 15px;
+    border: 1px solid rgb(224, 57, 168);
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px rgb(91, 89, 89);
+}
+
+.login-btn {
+    margin-top: 10px;
+    text-align: right;
+}

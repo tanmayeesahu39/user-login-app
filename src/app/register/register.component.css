@@ -1,0 +1,49 @@
+.register-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    border: 1px solid rgb(224, 57, 168);
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px rgb(91, 89, 89);
+    position: relative;
+}
+
+.register {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background: #6d44b8;
+}
+
+.form-group {
+    padding-top: 20px;
+}
+
+.register-content {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-right: 0px;
+}
+
+.register-content a {
+    text-decoration: none;
+}
+
+.register-btn {
+    right: 0;
+    width: 200px;
+    background: #6d44b8;
+}
+
+.register-form {
+    padding-bottom: 20px;
+}
+
+.content {
+    position: relative;
+    padding-bottom: 200px;
+}
