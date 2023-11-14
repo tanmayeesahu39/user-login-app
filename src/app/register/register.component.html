@@ -17,7 +17,6 @@
             <div class="form-group">
                 <label for="question" class="form-label">Security question</label>
                 <select class="form-select" aria-label="Default select example" formControlName="question" [ngClass]="{'is-invalid': submitted && registerForm.controls['question'].errors}">
-            <option selected>Select one question</option>
             <option value={{i}} *ngFor="let q of secretQuestions;let i = index">{{q}}</option>
             
           </select>
